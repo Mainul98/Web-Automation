@@ -1,0 +1,22 @@
+// Create a page.
+const page = await context.newPage();
+
+// Navigate explicitly, similar to entering a URL in the browser.
+await page.goto('http://example.com');
+// Fill an input.
+await page.locator('#search').fill('query');
+
+// Navigate implicitly by clicking a link.
+await page.locator('#submit').click();
+// Expect a new url.
+console.log(page.url());
+
+cls && npx playwright test
+npx playwright show-report
+npx playwright codegen
+
+	
+Web automation of orange hrm using playwright
+- Automate the login page of orange hrm using playwright
+- write positive and negative case
+- validate if login successful and unsuccessful
